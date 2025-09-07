@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!-- HTML(CONTEÚDO)-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de tipo em Javascript</title>
+    <style> /*CSS (ESTILO)*/
+        body{
+            background-color: rgb(105, 105, 224);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script> /*JS (INTERATIVIDADE)*/
+        var n1 = Number(window.prompt('Digite um número: ')) //String convertida para number
+        var n2 = Number(window.prompt('Digite outro número: ')) //String convertida para number
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + String(s));//convertendo número para string
+        // (number + number) para adição
+        // (string + string) é só concatenação
+    </script>
+</body>
+</html>

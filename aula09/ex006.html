@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(111, 111, 217);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg2">testando a seleção por nome</div>
+    <!-- <div class="msg">clique</div> -->
+    <script>
+        var url = window.document.write(window.document.URL)//demonstração da árvore(mandando escrever a URL que estou usando)
+        var corpo = window.document.body//varável do corpo do documento
+        var p1 = window.document.getElementsByTagName('p')[0]//seleção por tag(marca)
+        var d = window.document.getElementById('msg')//seleção por ID
+
+        window.document.write('Está escrito assim: ' + p1.innerText)//innerText não deixa o "DOM" em negrito, apenas puxa O TEXTO, sem as filhas/formatação
+        window.document.write('Está escrito assim: ' + p1.innerHTML)//innerHTML deixa o "DOM" em negrito, pega o HTML todo, inclusive os elementos filhos
+
+        corpo.style.background = 'green'//pegando a variável do corpo do documento para mudar a cor de fundo
+        p1.style.color = 'red'//usando a variável p1 para mudar a cor do texto
+
+        d.style.background = 'blue'//usando a variável d para mudar a cor
+        d.innerText = 'Estou aguardando...'//usando a variável d para mudar o texto
+
+        var n = window.document.getElementsByName('msg2')[0]//seleção por name
+        n.innerText = 'Olá'
+
+        var c = window.document.getElementsByClassName('msg')[0] //criando variável para usar o class
+
+        var s = window.document.querySelector('div#msg') //criando variável para usar o selector
+        //obs.: para div usamos " # ", para classe usamos " . "
+        // s.style.background = 'blue' //usando a variável p1 para mudar a cor
+    </script>
+</body>
+</html>
